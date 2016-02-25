@@ -18,8 +18,8 @@
         }
     </style>
 </head>
-    
-<body onload="generateFaces()"> 
+
+<body onload="generateFaces()">
     <h1>Matching Game</h1>
     <p>Click on the extra smiling face on the left.</p>
     <div id="leftSide"></div>
@@ -42,7 +42,7 @@
         var leftSideImages = theLeftSide.cloneNode(true);
         leftSideImages.removeChild(leftSideImages.lastChild);
         theRightSide.appendChild(leftSideImages);
-        
+
         theLeftSide.lastChild.onclick = function nextLevel(event){
             event.stopPropagation();
             while (theLeftSide.hasChildNodes()) {
@@ -54,15 +54,15 @@
             numberOfFaces += 5;
             generateFaces();
         };
-        
+
         theBody.onclick = function gameOver() {
             alert("Game Over!");
             theBody.onclick = null;
             theLeftSide.lastChild.onclick = null;
-        }; 
-        
+        };
+
     }
-    
+
 
 
 </script>
